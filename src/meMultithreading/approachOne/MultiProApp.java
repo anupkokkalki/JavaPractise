@@ -8,6 +8,14 @@ public class MultiProApp {
 		HelperClassOneExtendsThread helperOne = new HelperClassOneExtendsThread();
 
 		helperOne.start();
+		
+		
+		Thread t1 = new Thread() {
+			public void run() {
+				System.out.println("Anonymous Thread run method");
+			}
+		};
+		t1.start();
 
 		// main thread work
 		for (int i = 0; i < 10; i++) {
